@@ -1,3 +1,44 @@
+// MENU HAMBURGER MOBILE
+document.addEventListener('DOMContentLoaded', () => {
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  if (!navToggle || !navLinks) return;
+
+  const closeMenu = () => {
+    navToggle.classList.remove('is-open');
+    navLinks.classList.remove('is-open');
+    document.body.classList.remove('nav-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-label', 'Ouvrir le menu');
+  };
+
+  const openMenu = () => {
+    navToggle.classList.add('is-open');
+    navLinks.classList.add('is-open');
+    document.body.classList.add('nav-open');
+    navToggle.setAttribute('aria-expanded', 'true');
+    navToggle.setAttribute('aria-label', 'Fermer le menu');
+  };
+
+  navToggle.addEventListener('click', () => {
+    const isOpen = navToggle.classList.contains('is-open');
+    isOpen ? closeMenu() : openMenu();
+  });
+
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeMenu();
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 680) closeMenu();
+  });
+});
+
 // ============================================================
 // CONFIGURATION — À MODIFIER
 // Remplacez VOTRE_SHEET_ID par l'ID du Google Sheets

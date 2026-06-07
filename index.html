@@ -10,8 +10,15 @@
 <body>
 
 <nav>
-  <div class="nav-logo">Le <em>Ventre Jaune</em></div>
-  <ul class="nav-links">
+  <a href="#" class="nav-logo" aria-label="Accueil Le Ventre Jaune">Le <em>Ventre Jaune</em></a>
+
+  <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <ul class="nav-links" id="nav-links">
     <li><a href="#menu">Menu du jour</a></li>
     <li><a href="#esprit">Notre esprit</a></li>
     <!-- <li><a href="#reservation">Réservation</a></li> -->
@@ -191,7 +198,7 @@
         <div class="info-block">
           <h3>Contact</h3>
           <p><a href="tel:0477373302" style="color:var(--brun-moyen)">04 77 37 33 02</a></p>
-          <p><a href="https://www.facebook.com/profile.php?id=100072559298580 style="color:var(--brun-moyen)">Page Facebook</a></p>
+          <p><a href="https://www.facebook.com/profile.php?id=100072559298580" style="color:var(--brun-moyen)" target="_blank" rel="noopener">Page Facebook</a></p>
         </div>
         <div class="info-block">
           <h3>Horaires</h3>

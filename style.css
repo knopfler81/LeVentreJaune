@@ -20,11 +20,52 @@
     padding: 0 2.5rem; height: 64px;
     border-bottom: 3px solid var(--jaune);
   }
-  .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--jaune); letter-spacing: 0.04em; }
+  .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--jaune); letter-spacing: 0.04em; text-decoration: none; }
   .nav-logo em { font-style: italic; color: #fff; }
   .nav-links { display: flex; gap: 2rem; list-style: none; }
   .nav-links a { color: #e0d4c0; text-decoration: none; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; }
   .nav-links a:hover { color: var(--jaune); }
+
+  /* HAMBURGER MOBILE */
+  .nav-toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(232,160,0,0.5);
+    background: transparent;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0;
+    z-index: 102;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--jaune);
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  .nav-toggle.is-open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .nav-toggle.is-open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.is-open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  body.nav-open {
+    overflow: hidden;
+  }
+
 
   .hero {
     margin-top: 64px; background: var(--brun);
@@ -163,7 +204,93 @@
     .menu-week { grid-template-columns: 1fr; }
     .countdown { gap: 1rem; }
     .count-num { font-size: 2rem; }
-    nav { padding: 0 1rem; }
-    .nav-links { display: none; }
-    .btn-secondary { margin-left: 0; margin-top: 1rem; display: block; }
+
+    nav {
+      padding: 0 1rem;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-size: 1.05rem;
+      max-width: calc(100% - 58px);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .nav-toggle {
+      display: flex;
+    }
+
+    .nav-links {
+      position: fixed;
+      top: 64px;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      background: var(--brun);
+      border-bottom: 3px solid var(--jaune);
+      padding: 0.5rem 1rem 1rem;
+      transform: translateY(-120%);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: transform 0.25s ease, opacity 0.25s ease, visibility 0.25s ease;
+      z-index: 101;
+      max-height: calc(100vh - 64px);
+      overflow-y: auto;
+      box-shadow: 0 18px 30px rgba(0,0,0,0.25);
+    }
+
+    .nav-links.is-open {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .nav-links li {
+      width: 100%;
+      border-bottom: 1px solid rgba(232,160,0,0.18);
+    }
+
+    .nav-links li:last-child {
+      border-bottom: none;
+    }
+
+    .nav-links a {
+      display: block;
+      padding: 0.95rem 0.25rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+    }
+
+    .btn-secondary {
+      margin-left: 0;
+      margin-top: 1rem;
+      display: block;
+    }
+
+    section {
+      padding: 4rem 1.25rem;
+    }
+
+    .hero {
+      padding: 4rem 1.25rem;
+    }
+
+    .notify-form {
+      flex-direction: column;
+    }
+
+    .notify-form input {
+      border-right: 1.5px solid #c8b89a;
+      border-bottom: none;
+    }
+
+    .notify-form button {
+      width: 100%;
+    }
   }
