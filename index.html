@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le Ventre Jaune — Restaurant · Sury-le-Comtal</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Libre+Baskerville:ital@0;1&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">  
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Le <em>Ventre Jaune</em></div>
+  <ul class="nav-links">
+    <li><a href="#menu">Menu du jour</a></li>
+    <li><a href="#esprit">Notre esprit</a></li>
+    <!-- <li><a href="#reservation">Réservation</a></li> -->
+    <li><a href="#infos">Infos</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">Restaurant · Sury-le-Comtal · Loire</div>
+    <h1>Le <em>Ventre</em><br>Jaune</h1>
+    <p class="hero-sub">Cuisine traditionnelle maison · Généreuse & sincère</p>
+    <div class="hero-sep"><span></span><span style="width:6px;height:6px;background:var(--jaune);opacity:0.8;border-radius:50%"></span><span></span></div>
+    <p class="hero-reopen">✦ Bientôt de retour parmi vous ✦</p>
+    <a href="#menu" class="btn-primary">Menu de la semaine</a>
+    <!-- <a href="#reservation" class="btn-secondary">Réserver une table</a> -->
+  </div>
+</header>
+
+<!-- MENU DU JOUR -->
+<section id="menu" class="menu-section">
+  <div class="section-inner">
+    <span class="section-tag">Fait maison chaque jour</span>
+    <h2 class="section-title">Menu de <em>la semaine</em></h2>
+    <div class="divider"><span></span></div>
+    <p class="body-text">Entrée + plat + dessert — boisson non comprise. Menu unique, produits frais du marché.</p>
+
+    <div id="menu-container" class="menu-week">
+      <div class="menu-loading">Chargement du menu en cours…</div>
+    </div>
+
+    <div class="menu-note">
+      ℹ️ Le menu est mis à jour chaque semaine par notre équipe. En cas de doute, appelez-nous au <strong>04 77 37 33 02</strong>.
+    </div>
+  </div>
+</section>
+
+<!-- L'ESPRIT -->
+<section id="esprit" class="esprit-bg">
+  <div class="section-inner">
+    <span class="section-tag">Notre histoire</span>
+    <h2 class="section-title">Un bistrot <em>comme on les aime</em></h2>
+    <div class="divider"><span></span></div>
+    <div class="esprit-grid">
+      <div>
+        <p class="body-text">Au Ventre Jaune, on ne fait pas semblant. Les assiettes sont généreuses, les recettes sont celles d'ici, et le patron est toujours à l'écoute — prêt à resservir si votre appétit le demande.</p>
+        <blockquote class="esprit-quote">"Cuisine traditionnelle maison avec un bon rapport qualité-prix. Quantités très copieuses, le patron toujours à l'écoute."</blockquote>
+        <p class="body-text">Installé au cœur de Sury-le-Comtal, notre restaurant est un repère pour tous ceux qui cherchent une table vraie — sans chichi, avec du goût.</p>
+      </div>
+      <div>
+        <div class="pillars" style="margin-top:0; grid-template-columns: 1fr;">
+          <div class="pillar" style="text-align:left; display:flex; gap:1rem; align-items:flex-start; border-top:none; border-left: 3px solid var(--jaune); padding: 1rem 1.2rem;">
+            <span class="pillar-icon" style="font-size:1.4rem; flex-shrink:0;">🍲</span>
+            <div><h3>Fait maison</h3><p>Des recettes préparées chaque jour avec des produits frais, sélectionnés avec soin.</p></div>
+          </div>
+          <div class="pillar" style="text-align:left; display:flex; gap:1rem; align-items:flex-start; border-top:none; border-left: 3px solid var(--jaune); padding: 1rem 1.2rem; margin-top: 1rem;">
+            <span class="pillar-icon" style="font-size:1.4rem; flex-shrink:0;">🤝</span>
+            <div><h3>Accueil chaleureux</h3><p>Un service attentionné, une ambiance conviviale — vous êtes ici chez vous.</p></div>
+          </div>
+          <div class="pillar" style="text-align:left; display:flex; gap:1rem; align-items:flex-start; border-top:none; border-left: 3px solid var(--jaune); padding: 1rem 1.2rem; margin-top: 1rem;">
+            <span class="pillar-icon" style="font-size:1.4rem; flex-shrink:0;">💛</span>
+            <div><h3>Rapport qualité-prix</h3><p>Des assiettes généreuses à prix honnêtes — c'est la promesse du Ventre Jaune.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- // RÉSERVATION
+<section id="reservation" class="resa-bg">
+  <div class="section-inner">
+    <span class="section-tag">On vous attend</span>
+    <h2 class="section-title">Réserver <em>une table</em></h2>
+    <div class="divider"><span></span></div>
+    <p class="body-text">Réservation conseillée, surtout en semaine. Nous vous confirmons par téléphone dans les 24h.</p>
+    <div class="resa-grid">
+      <div class="resa-widget">
+        <h3>Votre réservation</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Prénom & Nom</label>
+            <input type="text" id="resa-nom" placeholder="Ex : Marie Dupont" />
+          </div>
+          <div class="form-group">
+            <label>Téléphone</label>
+            <input type="tel" id="resa-tel" placeholder="06 xx xx xx xx" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Date souhaitée</label>
+            <input type="date" id="resa-date" />
+          </div>
+          <div class="form-group">
+            <label>Nombre de couverts</label>
+            <select id="resa-couverts">
+              <option>1 personne</option>
+              <option selected>2 personnes</option>
+              <option>3 personnes</option>
+              <option>4 personnes</option>
+              <option>5 personnes</option>
+              <option>6 personnes</option>
+              <option>7+ personnes</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Service</label>
+          <select id="resa-service">
+            <option>Midi (12h – 14h)</option>
+            <option>Soir (19h – 21h)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message (optionnel)</label>
+          <textarea id="resa-msg" rows="2" placeholder="Allergie, anniversaire, demande particulière…" style="resize:vertical"></textarea>
+        </div>
+        <button class="btn-resa" onclick="envoyerResa()">Envoyer ma demande</button>
+        <div id="resa-confirm">✓ Votre demande a bien été envoyée ! Nous vous rappelons pour confirmer.</div>
+      </div>
+      <div class="resa-info">
+        <h3>Bon à savoir</h3>
+        <div class="info-ligne"><span class="info-dot">●</span><p>La réservation est confirmée uniquement par téléphone de notre part.</p></div>
+        <div class="info-ligne"><span class="info-dot">●</span><p>Pour les groupes de 7 personnes et plus, merci d'appeler directement.</p></div>
+        <div class="info-ligne"><span class="info-dot">●</span><p>Le menu du jour est unique — pas de carte à la pièce.</p></div>
+        <div class="info-ligne"><span class="info-dot">●</span><p>Nous sommes fermés le lundi et le dimanche.</p></div>
+        <div style="margin-top:2rem; padding:1.5rem; background:rgba(232,160,0,0.1); border:1px solid rgba(232,160,0,0.3);">
+          <p style="color:var(--jaune); font-family:'Playfair Display',serif; font-size:1.1rem; margin-bottom:0.5rem;">Préférez le téléphone ?</p>
+          <p style="font-size:1.3rem; font-weight:700; color:#fff; letter-spacing:0.05em;">04 77 37 33 02</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- RÉOUVERTURE -->
+<section id="reouverture" style="background: var(--jaune-pale);">
+  <!-- <div class="section-inner">
+    <span class="section-tag">On revient bientôt</span>
+    <h2 class="section-title">Réouverture <em>imminente</em></h2>
+    <div class="divider"><span></span></div>
+    <div class="reo-box">
+      <p style="font-family:'Libre Baskerville',serif; font-style:italic; color:#5a3e2b; font-size:1.05rem; max-width:500px; margin:0 auto 1.5rem;">Nous préparons notre retour avec autant de soin que nos plats. La salle sera bientôt de nouveau ouverte.</p>
+      <div class="countdown">
+        <div class="count-block"><span class="count-num" id="cd-j">--</span><div class="count-label">Jours</div></div>
+        <div class="count-sep">·</div>
+        <div class="count-block"><span class="count-num" id="cd-h">--</span><div class="count-label">Heures</div></div>
+        <div class="count-sep">·</div>
+        <div class="count-block"><span class="count-num" id="cd-m">--</span><div class="count-label">Minutes</div></div>
+        <div class="count-sep">·</div>
+        <div class="count-block"><span class="count-num" id="cd-s">--</span><div class="count-label">Secondes</div></div>
+      </div>
+      <p style="font-size:0.78rem; color:#aaa; font-style:italic; margin-bottom:1.5rem;">Date provisoire — surveillez notre page Facebook pour l'annonce officielle</p>
+      <div class="notify-form">
+        <input type="email" id="email-input" placeholder="votre@email.fr" />
+        <button onclick="subscribe()">M'alerter</button>
+      </div>
+      <p id="notif-msg">✓ Merci ! Nous vous préviendrons dès que la table est prête.</p>
+    </div>
+  </div>
+</section> -->
+
+<!-- INFOS -->
+<section id="infos">
+  <div class="section-inner">
+    <span class="section-tag">Infos pratiques</span>
+    <h2 class="section-title">Nous <em>retrouver</em></h2>
+    <div class="divider"><span></span></div>
+    <div class="infos-grid">
+      <div>
+        <div class="info-block">
+          <h3>Adresse</h3>
+          <p>29 Rue Arenette<br>42450 Sury-le-Comtal</p>
+        </div>
+        <div class="info-block">
+          <h3>Contact</h3>
+          <p><a href="tel:0477373302" style="color:var(--brun-moyen)">04 77 37 33 02</a></p>
+          <p><a href="https://www.facebook.com/profile.php?id=100072559298580 style="color:var(--brun-moyen)">Page Facebook</a></p>
+        </div>
+        <div class="info-block">
+          <h3>Horaires</h3>
+          <table class="horaires-table">
+            <tr><td>Dimanche</td><td>09:00 – 15:00</td></tr>
+            <tr><td>Lundi</td><td>07:30 – 15:00</td></tr>
+            <tr><td>Mardi</td><td>07:30 – 15:00</td></tr>
+            <tr><td>Mercredi</td><td>07:30 – 15:00</td></tr>
+            <tr><td>Jeudi</td><td>07:30 – 15:00</td></tr>
+            <tr><td>Vendredi</td><td>07:30 – 15:00</td></tr>
+            <tr><td>Samedi</td><td>08:00 – 17:00</td></tr>
+          </table>
+          <p style="font-size:0.75rem; color:#bbb; margin-top:0.5rem; font-style:italic;">* À confirmer à la réouverture</p>
+        </div>
+      </div>
+      <div>
+        <div class="info-block">
+          <h3>Accès</h3>
+          <p>Au cœur de Sury-le-Comtal, à deux pas de la place principale. Parking disponible à proximité.</p>
+          <a class="map-link" href="https://maps.google.com/?q=Le+Ventre+Jaune+Sury-le-Comtal" target="_blank">
+            📍 Ouvrir dans Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Le <em>Ventre Jaune</em></div>
+  <p>Restaurant traditionnel · Sury-le-Comtal · Loire</p>
+  <p>Mentions légales</p>
+  <div class="footer-sep"></div>
+  <p><a href="tel:0477373302">04 77 37 33 02</a> · <a href="https://www.facebook.com/restaurantleventrejaune">Facebook</a></p>
+  <p style="margin-top:1.5rem; font-size:0.7rem; opacity:0.4;">© Le Ventre Jaune · Tous droits réservés</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
